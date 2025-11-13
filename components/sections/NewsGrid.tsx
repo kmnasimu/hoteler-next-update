@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
+import { FadeInUp, FadeInLeft } from '@/lib/animations';
 
-export default function BlogGrid(){
+export default function NewsGrid() {
     const data = [
         {
             img: "news-1.jpg",
@@ -53,8 +54,8 @@ export default function BlogGrid(){
                 <div className="auto-container">
                     <div className="row">
                         {data.map((item, NewsGrid) => (
-                        <div key={NewsGrid} className="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
-                            <div className="inner-box wow fadeInLeft">
+                        <FadeInUp key={NewsGrid} delay={NewsGrid * 0.1} className="news-block col-lg-4 col-md-6 col-sm-12">
+                            <FadeInLeft delay={NewsGrid * 0.1 + 0.1} className="inner-box">
                                 <div className="image-box">
                                     <figure className="image overlay-anim"><Link href="/news-details"><img src={`images/resource/${item.img}`} alt="Image" /></Link></figure>
                                     <span className="date" dangerouslySetInnerHTML={{ __html: item.date }}></span>
@@ -67,8 +68,8 @@ export default function BlogGrid(){
                                     <h4 className="title"><Link href="/news-details" dangerouslySetInnerHTML={{ __html: item.title }}></Link></h4>
                                     <Link href="/news-details" className="read-more">Read More<i className="fa-solid fa-arrow-right" /></Link>
                                 </div>
-                            </div>
-                        </div>
+                            </FadeInLeft>
+                        </FadeInUp>
                         ))}
                     </div>
                 </div>

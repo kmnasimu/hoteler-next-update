@@ -3,13 +3,15 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function ShopCheckout1 (){  
-  const [isActive, setIsActive] = useState({
+interface ShopCheckoutProps {}
+
+export default function ShopCheckout(_props: ShopCheckoutProps) {  
+  const [isActive, setIsActive] = useState<{ status: boolean; key: number }>({
     status: false,
     key: 1,
   })
 
-  const handleClick = (key) => {
+  const handleClick = (key: number) => {
     if (isActive.key === key) {
       setIsActive({
         status: false,
@@ -142,10 +144,10 @@ export default function ShopCheckout1 (){
                   <h3>Choose a Payment Method</h3>
                   <ul className="accordion-box">
                     <li className="accordion block active-block">
-                      <div className={isActive.key == 1 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(1)}>
+                      <div className={isActive.key === 1 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(1)}>
                         <div className="icon-outer"><i className="lnr-icon-chevron-down"></i></div> Credir Card / Debit Card
                       </div>
-                      <div className={isActive.key == 1 ? "acc-content current" : "acc-content"}>
+                      <div className={isActive.key === 1 ? "acc-content current" : "acc-content"}>
                         <div className="payment-info">
                           <div className="row clearfix">
                                 <div className="col-lg-6 col-md-6 col-sm-12 column">
@@ -178,30 +180,30 @@ export default function ShopCheckout1 (){
                       </div>
                     </li>
                     <li className="accordion block">
-                      <div className={isActive.key == 2 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(2)}>
+                      <div className={isActive.key === 2 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(2)}>
                         <div className="icon-outer"><i className="lnr-icon-chevron-down"></i></div> Direct Bank Transfer
                       </div>
-                      <div className={isActive.key == 2 ? "acc-content current" : "acc-content"}>
+                      <div className={isActive.key === 2 ? "acc-content current" : "acc-content"}>
                         <div className="payment-info">
                           <p className="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wonâ€™t be shipped until the funds have cleared in our account.</p>
                         </div>
                       </div>
                     </li>
                     <li className="accordion block">
-                     <div className={isActive.key == 3 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(3)}>
+                     <div className={isActive.key === 3 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(3)}>
                         <div className="icon-outer"><i className="lnr-icon-chevron-down"></i></div> Cheque Payment
                       </div>
-                      <div className={isActive.key == 3 ? "acc-content current" : "acc-content"}>
+                      <div className={isActive.key === 3 ? "acc-content current" : "acc-content"}>
                         <div className="payment-info">
                           <p className="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wonâ€™t be shipped until the funds have cleared in our account.</p>
                         </div>
                       </div>
                     </li>
                     <li className="accordion block">
-                     <div className={isActive.key == 4 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(4)}>
+                     <div className={isActive.key === 4 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(4)}>
                         <div className="icon-outer"><i className="lnr-icon-chevron-down"></i></div> Other Payment
                       </div>
-                      <div className={isActive.key == 4 ? "acc-content current" : "acc-content"}>
+                      <div className={isActive.key === 4 ? "acc-content current" : "acc-content"}>
                         <div className="payment-info">
                           <p className="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order wonâ€™t be shipped until the funds have cleared in our account.</p>
                         </div>

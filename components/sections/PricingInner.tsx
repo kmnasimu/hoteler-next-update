@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { FadeInLeft } from '@/lib/animations';
 
 
 export default function PricingInner() {
@@ -14,7 +15,7 @@ export default function PricingInner() {
           <div className="pricing-block-four col-md-6 col-lg-4">
             <div className="inner-box">
               <div className="content-column">
-                <div className="inner-column wow fadeInLeft">
+                <FadeInLeft delay={0} className="inner-column">
                   <span className="pricing-title">Single Room</span>
                   <h6 className="pricing-amount"><sup>$</sup>29 <span>Per Room</span></h6>
                   <ul className="list-style-two">
@@ -26,14 +27,14 @@ export default function PricingInner() {
                     <li><i className="icon fa fa-circle-check" />Book Hotel Rooms</li>
                   </ul>
                   <Link href="/page-pricing" className="book-now btn-style-four">Book Now</Link>
-                </div>
+                </FadeInLeft>
               </div>
             </div>
           </div>
           <div className="pricing-block-four col-md-6 col-lg-4">
             <div className="inner-box">
               <div className="content-column">
-                <div className="inner-column wow fadeInLeft">
+                <FadeInLeft delay={0.2} className="inner-column">
                   <span className="pricing-title">Double Room</span>
                   <h6 className="pricing-amount"><sup>$</sup>40 <span>Per Room</span></h6>
                   <ul className="list-style-two">
@@ -45,14 +46,14 @@ export default function PricingInner() {
                     <li><i className="icon fa fa-circle-check" />Book Hotel Rooms</li>
                   </ul>
                   <Link href="/page-pricing" className="book-now btn-style-four">Book Now</Link>
-                </div>
+                </FadeInLeft>
               </div>
             </div>
           </div>
           <div className="pricing-block-four col-md-6 col-lg-4">
             <div className="inner-box">
               <div className="content-column">
-                <div className="inner-column wow fadeInLeft">
+                <FadeInLeft delay={0.4} className="inner-column">
                   <span className="pricing-title">Family Room</span>
                   <h6 className="pricing-amount"><sup>$</sup>99 <span>Per Room</span></h6>
                   <ul className="list-style-two">
@@ -64,7 +65,7 @@ export default function PricingInner() {
                     <li><i className="icon fa fa-circle-check" />Book Hotel Rooms</li>
                   </ul>
                   <Link href="/page-pricing" className="book-now btn-style-four">Book Now</Link>
-                </div>
+                </FadeInLeft>
               </div>
             </div>
           </div>

@@ -48,7 +48,8 @@ const Layout: React.FC<LayoutProps> = ({ children, HeaderStyle, FooterStyle, dar
     useEffect(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') return;
         
-        if (darkMode === '1') {
+        const isDarkMode = darkMode === '1' || darkMode === true;
+        if (isDarkMode) {
             document.body.classList.add('dark-mode');
         } else {
             document.body.classList.remove('dark-mode');

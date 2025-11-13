@@ -2,10 +2,14 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export default function PortfolioFilter1() {
-    const isotopeContainer = useRef(null);
-    const [filterKey, setFilterKey] = useState("*");
-	const [isotopeInstance, setIsotopeInstance] = useState<any | null>(null);
+interface IsotopeInstance {
+    arrange: (options: { filter: string }) => void;
+}
+
+export default function PortfolioFilter2() {
+    const isotopeContainer = useRef<HTMLDivElement | null>(null);
+    const [filterKey, setFilterKey] = useState<string>("*");
+	const [isotopeInstance, setIsotopeInstance] = useState<IsotopeInstance | null>(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {

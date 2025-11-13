@@ -31,7 +31,7 @@ const teamMembers = [
   }  
 ];
 
-export default function Team() {
+export default function TeamGrid() {
   return (
     <section id="team" className="team-section">
       <div className="anim-icons">
