@@ -18,6 +18,8 @@ export default function CheckoutForm() {
             <h4>Check-In</h4>
             <div className="chk-field">
               <DatePicker
+                id="check-in-date"
+                name="checkInDate"
                 selected={checkInDate}
                 onChange={(date: Date | null) => setCheckInDate(date)}
                 dateFormat="yyyy/MM/dd"
@@ -31,6 +33,8 @@ export default function CheckoutForm() {
             <h4>Check-Out</h4>
             <div className="chk-field">
               <DatePicker
+                id="check-out-date"
+                name="checkOutDate"
                 selected={checkOutDate}
                 onChange={(date: Date | null) => setCheckOutDate(date)}
                 dateFormat="yyyy/MM/dd"
@@ -44,7 +48,7 @@ export default function CheckoutForm() {
             <h4>Quests</h4>
             <div className="chk-field py-2">
               <i className="fas fa-angle-down" />
-              <select value={guests} onChange={(e) => setGuests(e.target.value)}>
+              <select id="guests-count" name="guests" value={guests} onChange={(e) => setGuests(e.target.value)}>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
