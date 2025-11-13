@@ -1,13 +1,10 @@
 ﻿'use client';
 
+"use client"
 import { useEffect, useState, useRef } from 'react';
 import Counter from './Counter';
 
-interface CounterUpProps {
-    end: string | number;
-}
-
-export default function CounterUp({ end }: CounterUpProps) {
+export default function CounterUp({ end }) {
     const [inViewport, setInViewport] = useState(false);
     const ref = useRef(null);
 
@@ -39,11 +36,7 @@ export default function CounterUp({ end }: CounterUpProps) {
         };
     }, []);
 
-    // Convert end to number if it's a string
-    const endNumber = typeof end === 'string' ? parseFloat(end) || 0 : end;
-
-    return <span ref={ref} className="count-text">{inViewport && <Counter end={endNumber} duration={20} />}</span>;
+    return <span ref={ref} className="count-text">{inViewport && <Counter end={end} duration={20} />}</span>;
 }
-
 
 

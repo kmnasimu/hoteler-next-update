@@ -1,14 +1,17 @@
+import Head from 'next/head';
 import React from 'react';
 
 type PageHeadProps = {
     headTitle?: React.ReactNode;
 };
 
-// Note: In App Router, metadata should be handled via metadata export in page files
-// This component is kept for backward compatibility but does nothing in App Router
-const PageHead: React.FC<PageHeadProps> = () => {
-    // In App Router, metadata is handled via metadata export, not Head component
-    return null;
+const PageHead: React.FC<PageHeadProps> = ({ headTitle }) => {
+    return (
+        <Head>
+            <title>{headTitle ? headTitle : "Hoteler - Hotel Booking React Next JS Template"}</title>
+            <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+        </Head>
+    );
 };
 
 export default PageHead;

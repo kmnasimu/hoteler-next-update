@@ -1,13 +1,8 @@
 ﻿'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react'
 
-interface CounterProps {
-    end: number;
-    duration: number;
-}
-
-export default function Counter({ end, duration }: CounterProps) {
+export default function Counter({ end, duration }) {
     const [count, setCount] = useState(0)
     const countRef = useRef(null)
     const increment = end / duration

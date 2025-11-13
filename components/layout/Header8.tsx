@@ -3,9 +3,7 @@ import Link from 'next/link';
 import NavLinks from './NavLinks';
 import MobileMenu from './MobileMenu';
 
-import { HeaderProps } from '@/types/header';
-
-const Header8 = ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }: HeaderProps) => {
+const Header8 = ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }) => {
 
 
 

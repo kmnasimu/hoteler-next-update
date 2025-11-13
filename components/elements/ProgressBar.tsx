@@ -2,11 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 
-interface ProgressBarProps {
-    targetPercentage: number;
-}
-
-const ProgressBar = ({ targetPercentage }: ProgressBarProps) => {
+const ProgressBar = ({ targetPercentage }) => {
     const [percentage, setPercentage] = useState(0);
     const animationDuration = 3000;
 

@@ -85,7 +85,7 @@ const rooms = [
   },
 ];
 
-export default function ServiceGrid() {
+export default function Room() {
   return (
     <section id="projects" className="room-service-section pt-120 pb-60">
       <div className="auto-container">

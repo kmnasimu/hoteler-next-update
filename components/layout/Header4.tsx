@@ -10,9 +10,7 @@ import LogoDark from "../../public/images/logo.png";
 import LogoWhite from "../../public/images/logo-2.png";
 
 
-import { HeaderProps } from '@/types/header';
-
-function Header4({ handleOpen, handleRemove, searchToggle, handleToggle, scroll}: HeaderProps) {
+function Header4({ handleOpen, handleRemove, searchToggle, handleToggle, scroll}) {
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [isSingleMenu, setIsSingleMenu] = useState(false);
     useEffect(() => {

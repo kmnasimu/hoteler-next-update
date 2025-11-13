@@ -2,7 +2,7 @@
 import React from 'react';
 import CounterUp from '../../elements/CounterUp';
 
-export default function Funfact() {
+export default function Home1_Section8() {
     return (
         <>
 

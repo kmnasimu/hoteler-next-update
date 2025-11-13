@@ -21,4 +21,3 @@ export const playfairDisplay = Playfair_Display({
   display: 'swap',
 });
 
-

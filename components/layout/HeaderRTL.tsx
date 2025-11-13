@@ -8,9 +8,7 @@ import MobileMenu from "./MobileMenu";
 import LogoDark from "../../public/images/logo.png";
 import LogoWhite from "../../public/images/logo-2.png";
 
-import { HeaderProps } from '@/types/header';
-
-function HeaderRtl ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }: HeaderProps){
+function HeaderRtl ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }){
 
     return (
         <>

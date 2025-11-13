@@ -19,11 +19,11 @@ import PageHead from './PageHead';
 
 type LayoutProps = {
     children?: React.ReactNode;
-    HeaderStyle?: 'rtl1' | 'two' | 'three' | 'four' | 'five' | 'six' | 'seven' | 'eight' | 'nine' | 'ten' | 'error' | undefined;
-    FooterStyle?: 'footerRTL' | 'error' | undefined;
-    darkMode?: string | boolean;
-    menuType?: 'single' | string;
-    rtl?: boolean;
+    HeaderStyle?: any;
+    FooterStyle?: any;
+    darkMode?: any;
+    menuType?: any;
+    rtl?: any;
 };
 
 const Layout: React.FC<LayoutProps> = ({ children, HeaderStyle, FooterStyle, darkMode, menuType, rtl }) => {
@@ -48,8 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children, HeaderStyle, FooterStyle, dar
     useEffect(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') return;
         
-        const isDarkMode = darkMode === '1' || darkMode === true;
-        if (isDarkMode) {
+        if (darkMode === '1') {
             document.body.classList.add('dark-mode');
         } else {
             document.body.classList.remove('dark-mode');

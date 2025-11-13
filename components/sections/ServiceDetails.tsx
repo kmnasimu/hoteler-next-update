@@ -67,7 +67,7 @@ export default function ServiceDetails() {
                     </div>
                   </div>
                   <div className="sidebar-widget service-sidebar-single mt-4">
-                    <div className="service-sidebar-single-btn">
+                    <div className="service-sidebar-single-btn wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="1200m">
                       <Link href="/" className="theme-btn btn-style-one d-grid"><span className="btn-title"><span className="fas fa-file-pdf"></span> download pdf file</span></Link>
                     </div>
                   </div>

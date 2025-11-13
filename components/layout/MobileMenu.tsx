@@ -9,7 +9,7 @@ const MobileMenu = () => {
         key: 0,
     });
 
-    const handleClick = (key: number) => {
+    const handleClick = (key) => {
         if (isActive.key === key) {
             setIsActive({
                 status: false,
@@ -27,7 +27,7 @@ const MobileMenu = () => {
         key: 0,
     });
 
-    const handleSubClick = (key: number) => {
+    const handleSubClick = (key) => {
         if (isSubActive.key === key) {
             setSubIsActive({
                 status: false,

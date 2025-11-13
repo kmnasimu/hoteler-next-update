@@ -20,7 +20,7 @@ const BudgetRange = () => {
         <Range
           className="distance-range-slider"
           value={value}
-          onChange={(val: number | number[]) => setValue(val as [number, number])}
+          onChange={(val) => setValue(val as [number, number])}
           min={0}
           max={2000}
           step={1}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TestimonialInner() {
+export default function Testimonial() {
     return (
         <>
         <section className="testimonial-section-five">

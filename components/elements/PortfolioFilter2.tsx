@@ -2,14 +2,10 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-interface IsotopeInstance {
-    arrange: (options: { filter: string }) => void;
-}
-
-export default function PortfolioFilter2() {
-    const isotopeContainer = useRef<HTMLDivElement | null>(null);
-    const [filterKey, setFilterKey] = useState<string>("*");
-	const [isotopeInstance, setIsotopeInstance] = useState<IsotopeInstance | null>(null);
+export default function PortfolioFilter1() {
+    const isotopeContainer = useRef(null);
+    const [filterKey, setFilterKey] = useState("*");
+	const [isotopeInstance, setIsotopeInstance] = useState<any | null>(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -41,11 +37,11 @@ export default function PortfolioFilter2() {
         }
     }, [filterKey, isotopeInstance]);
 
-    const handleFilterKeyChange = (key: string) => () => {
+    const handleFilterKeyChange = (key) => () => {
         setFilterKey(key);
     };
 
-    const activeBtn = (value: string) => (value === filterKey ? "filter active" : "filter");
+    const activeBtn = (value) => (value === filterKey ? "filter active" : "filter");
 
     return (
         <>

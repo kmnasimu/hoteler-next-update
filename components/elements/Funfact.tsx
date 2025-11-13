@@ -1,15 +1,9 @@
 import React from 'react';
 import CounterUp from './CounterUp';
-import { FadeInUp } from '@/lib/animations';
 
-interface FunfactData {
-    icon: string;
-    count: string;
-    title: string;
-}
+const Funfact = () => {
 
-const Funfact: React.FC = () => {
-    const Funfactdata: FunfactData[] = [
+    const Funfactdata = [
         {
             icon: "business-060-graph",        
             count: "255",
@@ -34,14 +28,14 @@ const Funfact: React.FC = () => {
 
     return (
         <>
-            {Funfactdata.map((item, index) => (
-                <FadeInUp key={index} delay={index * 0.1} className="counter-block-four col-lg-3 col-md-6 col-sm-6">
+            {Funfactdata.map((item, CounterBlock) => (
+                <div key={CounterBlock} className="counter-block-four col-lg-3 col-md-6 col-sm-6 wow fadeInUp">
                     <div className="inner">
                         <i className={`icon flaticon-${item.icon}`} />
                         <div className="count-box"><span className="count-text"><CounterUp end={item.count} /></span></div>
                         <span className="counter-title">{item.title}</span>
                     </div>
-                </FadeInUp>
+                </div>
             ))}
         </>
     );

@@ -9,9 +9,7 @@ import MobileMenu from "./MobileMenu";
 import LogoDark from "../../public/images/logo.png";
 import LogoWhite from "../../public/images/logo-2.png";
 
-import { HeaderProps } from '@/types/header';
-
-function Header5 ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }: HeaderProps){
+function Header5 ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }){
 
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [isSingleMenu, setIsSingleMenu] = useState(false);
