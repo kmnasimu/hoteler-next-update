@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import React from 'react';
 import { barlowCondensed, openSans, playfairDisplay } from '@/lib/fonts';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import './globals.css';
 import RootLayoutClient from '@/app/RootLayoutClient';
 import ErrorBoundary from '@/components/ErrorBoundary';
@@ -24,7 +22,6 @@ export default function RootLayout({
     <html lang="en" className={`${barlowCondensed.variable} ${openSans.variable} ${playfairDisplay.variable}`}>
       <head>
         <link rel="stylesheet" href="/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/css/style-dark.css" />
         <link rel="stylesheet" href="/css/style.css" />
       </head>
       <body>

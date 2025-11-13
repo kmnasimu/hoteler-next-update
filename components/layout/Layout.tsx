@@ -48,10 +48,26 @@ const Layout: React.FC<LayoutProps> = ({ children, HeaderStyle, FooterStyle, dar
     useEffect(() => {
         if (typeof window === 'undefined' || typeof document === 'undefined') return;
         
-        if (darkMode === '1' || darkMode === true) {
+        const isDarkMode = darkMode === '1' || darkMode === true;
+        
+        if (isDarkMode) {
             document.body.classList.add('dark-mode');
+            // Load dark mode CSS only when needed
+            const darkCssId = 'style-dark-css';
+            if (!document.getElementById(darkCssId)) {
+                const link = document.createElement('link');
+                link.id = darkCssId;
+                link.rel = 'stylesheet';
+                link.href = '/css/style-dark.css';
+                document.head.appendChild(link);
+            }
         } else {
             document.body.classList.remove('dark-mode');
+            // Remove dark mode CSS when not needed
+            const darkCss = document.getElementById('style-dark-css');
+            if (darkCss && darkCss.parentNode) {
+                darkCss.parentNode.removeChild(darkCss);
+            }
         }
     }, [darkMode]);
 
