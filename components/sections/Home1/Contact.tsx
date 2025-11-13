@@ -38,6 +38,7 @@ export default function Contact() {
                           type="text"
                           name="name"
                           placeholder="Your Name"
+                          autoComplete="name"
                           required
                         />
                       </div>
@@ -46,6 +47,7 @@ export default function Contact() {
                           type="email"
                           name="email"
                           placeholder="Email Address"
+                          autoComplete="email"
                           required
                         />
                       </div>
@@ -54,6 +56,7 @@ export default function Contact() {
                           type="text"
                           name="phone"
                           placeholder="Check In"
+                          autoComplete="tel"
                           required
                         />
                       </div>
@@ -62,6 +65,7 @@ export default function Contact() {
                           type="text"
                           name="subject"
                           placeholder="Check Out"
+                          autoComplete="off"
                           required
                         />
                       </div>
@@ -69,6 +73,7 @@ export default function Contact() {
                         <textarea
                           name="textarea"
                           placeholder="Write a Message"
+                          autoComplete="off"
                           rows={2}
                         ></textarea>
                       </div>
