@@ -12,7 +12,7 @@ const Accordion: React.FC = () => {
     );
 
     const handleToggle = (key: number) => {
-        if (isActive.key ==== key) {
+        if (isActive.key === key) {
             setIsActive({
                 status: false,
                 key: null,
@@ -28,11 +28,11 @@ const Accordion: React.FC = () => {
         <>
             <FadeInRight className="accordion-box">
             <ul>
-                <li className={isActive.key ==== 1 ? "accordion block active-block" : "accordion block"} onClick={() => handleToggle(1)}>
-                    <div className={isActive.key ==== 1 ? "acc-btn active" : "acc-btn"}>How to soft launch your business?
+                <li className={isActive.key === 1 ? "accordion block active-block" : "accordion block"} onClick={() => handleToggle(1)}>
+                    <div className={isActive.key === 1 ? "acc-btn active" : "acc-btn"}>How to soft launch your business?
                         <div className="icon fa fa-plus"></div>
                     </div>
-                    <div className={isActive.key ==== 1 ? "acc-content current" : "acc-content"}>
+                    <div className={isActive.key === 1 ? "acc-content current" : "acc-content"}>
                         <div className="content">
                             <div className="text">There are many variations of passages the majority have suffered alteration in some fo injected humour or random ised words believ able lorem Ipsum generators on the internet tend to repeat predefined chunks as necessary.</div>
                         </div>
