@@ -52,7 +52,7 @@ export default function CheckoutForm() {
               </select>
             </div>
           </div>
-          <Link href="/page-rooms" className="theme-btn btn-style-one">
+          <Link href="/rooms" className="theme-btn btn-style-one">
             <span className="btn-title">Check Availability</span>
           </Link>
         </div>
