@@ -1,0 +1,9 @@
+/* Import compiled CSS files from public directory */
+/* These files are pre-compiled and served as static assets */
+
+/* Import Swiper styles */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+/* Font variables are set via CSS variables in layout.tsx */

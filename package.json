@@ -1,0 +1,40 @@
+{
+  "name": "arotech",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sass": "sass --watch public/scss/style.scss:public/css/style.css",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "^1.4.0",
+    "eslint": "8.32.0",
+    "eslint-config-next": "^15.0.0",
+    "framer-motion": "^11.0.0",
+    "gsap": "^3.12.7",
+    "isotope-layout": "^3.0.6",
+    "next": "^15.0.0",
+    "rc-slider": "^11.1.7",
+    "react": "^18.2.0",
+    "react-countup": "^6.4.1",
+    "react-datepicker": "^8.3.0",
+    "react-dom": "^18.2.0",
+    "react-modal-video": "^2.0.0",
+    "react-slick": "^0.30.3",
+    "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.57.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/react-slick": "^0.23.13",
+    "typescript": "^5.3.0"
+  }
+}
