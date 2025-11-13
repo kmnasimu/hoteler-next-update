@@ -6,11 +6,17 @@ const RootLayoutClient: React.FC<{ children?: React.ReactNode }> = ({ children }
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    // Wait for actual page resources to load
+    const handleLoad = () => {
       setLoading(false);
-    }, 1000);
+    };
 
-    return () => clearTimeout(timer);
+    if (document.readyState === 'complete') {
+      setLoading(false);
+    } else {
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
+    }
   }, []);
 
   return loading ? <div className="preloader"></div> : <>{children}</>;

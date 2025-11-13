@@ -7,7 +7,7 @@ const msInMinute = 60 * 1000;
 const msInAHour = 60 * msInMinute;
 const msInADay = 24 * msInAHour;
 
-const getPartsofTimeDuration = (duration) => {
+const getPartsofTimeDuration = (duration: number) => {
     const days = Math.floor(duration / msInADay);
     const hours = Math.floor((duration % msInADay) / msInAHour);
     const minutes = Math.floor((duration % msInAHour) / msInMinute);
@@ -16,7 +16,11 @@ const getPartsofTimeDuration = (duration) => {
     return { days, hours, minutes, seconds };
 };
 
-const CountDown = (endDateTime) => {
+interface CountDownProps {
+    endDateTime: string | Date;
+}
+
+const CountDown = ({ endDateTime }: CountDownProps) => {
     const [time, setTime] = useState(new Date().toLocaleTimeString());
 
     useEffect(() => {
@@ -31,7 +35,7 @@ const CountDown = (endDateTime) => {
 
     const now = Date.now(); // Number of milliseconds from begining of time
 
-    const future = new Date(endDateTime.endDateTime); // The day we leave for Japan
+    const future = new Date(endDateTime); // The day we leave for Japan
 
     const timeDif = future.getTime() - now;
     const timeParts = getPartsofTimeDuration(timeDif);

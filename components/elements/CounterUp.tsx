@@ -1,12 +1,14 @@
-﻿'use client';
-
-"use client"
+﻿"use client"
 import { useEffect, useState, useRef } from 'react';
 import Counter from './Counter';
 
-export default function CounterUp({ end }) {
+interface CounterUpProps {
+    end: number;
+}
+
+export default function CounterUp({ end }: CounterUpProps) {
     const [inViewport, setInViewport] = useState(false);
-    const ref = useRef(null);
+    const ref = useRef<HTMLSpanElement>(null);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;

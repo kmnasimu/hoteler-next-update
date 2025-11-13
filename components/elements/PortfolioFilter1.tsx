@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 export default function PortfolioFilter1() {
 	const isotopeContainer = useRef<HTMLDivElement | null>(null);
 	const [filterKey, setFilterKey] = useState<string>("*");
-	const [isotopeInstance, setIsotopeInstance] = useState<any | null>(null);
+	const [isotopeInstance, setIsotopeInstance] = useState<{ arrange: (options: { filter: string }) => void } | null>(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {

@@ -2,10 +2,10 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-export default function PortfolioFilter1() {
-    const isotopeContainer = useRef(null);
-    const [filterKey, setFilterKey] = useState("*");
-	const [isotopeInstance, setIsotopeInstance] = useState<any | null>(null);
+export default function PortfolioFilter2() {
+    const isotopeContainer = useRef<HTMLDivElement | null>(null);
+    const [filterKey, setFilterKey] = useState<string>("*");
+	const [isotopeInstance, setIsotopeInstance] = useState<{ arrange: (options: { filter: string }) => void } | null>(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -37,11 +37,11 @@ export default function PortfolioFilter1() {
         }
     }, [filterKey, isotopeInstance]);
 
-    const handleFilterKeyChange = (key) => () => {
+    const handleFilterKeyChange = (key: string) => () => {
         setFilterKey(key);
     };
 
-    const activeBtn = (value) => (value === filterKey ? "filter active" : "filter");
+    const activeBtn = (value: string) => (value === filterKey ? "filter active" : "filter");
 
     return (
         <>

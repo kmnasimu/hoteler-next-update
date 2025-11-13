@@ -1,5 +1,6 @@
 import React from 'react';
 import CounterUp from './CounterUp';
+import { FadeInUp } from '@/lib/animations';
 
 const Funfact = () => {
 
@@ -29,13 +30,13 @@ const Funfact = () => {
     return (
         <>
             {Funfactdata.map((item, CounterBlock) => (
-                <div key={CounterBlock} className="counter-block-four col-lg-3 col-md-6 col-sm-6 wow fadeInUp">
+                <FadeInUp key={CounterBlock} className="counter-block-four col-lg-3 col-md-6 col-sm-6">
                     <div className="inner">
                         <i className={`icon flaticon-${item.icon}`} />
-                        <div className="count-box"><span className="count-text"><CounterUp end={item.count} /></span></div>
+                        <div className="count-box"><span className="count-text"><CounterUp end={parseInt(item.count)} /></span></div>
                         <span className="counter-title">{item.title}</span>
                     </div>
-                </div>
+                </FadeInUp>
             ))}
         </>
     );

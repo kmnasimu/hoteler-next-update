@@ -3,7 +3,9 @@ import React from 'react';
 import NavLinks from './NavLinks';
 import MobileMenu from './MobileMenu';
 
-const Header7 = ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }) => {
+import { HeaderProps } from '@/types/header';
+
+const Header7 = ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll }: HeaderProps) => {
 
     return (
         <>

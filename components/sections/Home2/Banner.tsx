@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { FadeInUp, FadeInRight } from '@/lib/animations';
 
 function Banner() {
     return (
@@ -14,7 +15,7 @@ function Banner() {
             <div className="outer-box">
                 <div className="content-column">
                     <div className="inner-column">
-                        <div className="offer-text wow fadeInUp" data-wow-delay="300ms">
+                        <FadeInUp delay={0.3} className="offer-text">
                             <div className="star-rating">
                                 <i className="fa-sharp fa-solid fa-star" />
                                 <i className="fa-sharp fa-solid fa-star" />
@@ -23,18 +24,22 @@ function Banner() {
                                 <i className="fa-sharp fa-solid fa-star" />
                             </div>
                             1000+ happy clients
-                        </div>
-                        <h1 className="title wow fadeInUp" data-wow-delay="600ms">Best Luxury hotel <br />In the world.</h1>
-                        <div className="text wow fadeInUp" data-wow-delay="800ms">Discover the ultimate comfort and luxury with our handpicked selection <br />of hotels designed to make your stay unforgettable.</div>
-                        <div className="btn-box wow fadeInUp" data-wow-delay="900ms">
+                        </FadeInUp>
+                        <FadeInUp delay={0.6} className="title">
+                            <h1>Best Luxury hotel <br />In the world.</h1>
+                        </FadeInUp>
+                        <FadeInUp delay={0.8} className="text">
+                            <div>Discover the ultimate comfort and luxury with our handpicked selection <br />of hotels designed to make your stay unforgettable.</div>
+                        </FadeInUp>
+                        <FadeInUp delay={0.9} className="btn-box">
                             <Link href="/contact" className="theme-btn btn-style-two"><span className="btn-title">BOOK NOW</span></Link>
-                        </div>
+                        </FadeInUp>
                     </div>
                 </div>
                 <div className="images-column">
-                    <div className="inner-column wow fadeInRight" data-wow-delay="200ms">
+                    <FadeInRight delay={0.2} className="inner-column">
                         <div className="bg bg-image" style={{ backgroundImage: 'url(images/banner/banner2-2.jpg)' }}></div>
-                    </div>
+                    </FadeInRight>
                 </div>
             </div>
         </section>

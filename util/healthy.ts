@@ -1,75 +1,85 @@
-const data = [
+interface BlogPost {
+    id: number;
+    title: string;
+    img: string;
+    category: string;
+    author: string;
+    date: string;
+}
+
+const data: BlogPost[] = [
     {
         id: 1,
-        title: "Are You Ready To Go Home After The Sunset View?",
-        img: "news1.png",
-        authorTitle: "Joseph",
+        title: "Helpful Tips for Working from Home as a Freelancer",
+        img: "img.png",
+        category: "Working Tips",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 2,
-        title: "Life is as free as eagles, or is it just loneliness?",
-        img: "news2.png",
-        authorTitle: "Joseph",
+        title: "10 Easy Ways to Be Environmentally Conscious At Home",
+        img: "img2.png",
+        category: "Development",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 3,
-        title: "16 Unheard Ways To Achieve Greater Walker",
-        img: "news3.png",
-        authorTitle: "Joseph",
+        title: "How to Give Your Space a Parisian-Inspired Makeover",
+        img: "img3.png",
+        category: "Lifestyle",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 4,
-        title: "Master The Art Of Nature With These 7 Tips",
-        img: "news4.png",
-        authorTitle: "Joseph",
+        title: "Facts About Business That Will Help You Success",
+        img: "img4.png",
+        category: "Business",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 5,
-        title: "16 Unheard Ways To Achieve Greater Walker",
-        img: "news5.png",
-        authorTitle: "Joseph",
+        title: "The Next 60 Things To Immediately Do About Building A Plan",
+        img: "img5.png",
+        category: "Building",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 6,
         title: "Master The Art Of Nature With These 7 Tips",
-        img: "news6.png",
-        authorTitle: "Joseph",
+        img: "img6.png",
+        category: "Joseph",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 7,
         title: "Your Light Is About To Stop Being Relevant",
-        img: "news7.png",
-        authorTitle: "Joseph",
+        img: "img7.png",
+        category: "Joseph",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 8,
         title: "Your Light Is About To Stop Being Relevant",
-        img: "news8.png",
-        authorTitle: "Joseph",
+        img: "img8.png",
+        category: "Joseph",
         author: "author.jpg",
         date: "25 April 2022",
     },
     {
         id: 9,
         title: "Master The Art Of Nature With These 7 Tips",
-        img: "news9.png",
-        authorTitle: "Joseph",
+        img: "img9.png",
+        category: "Joseph",
         author: "author.jpg",
         date: "25 April 2022",
     }
 ];
 export default data;
+

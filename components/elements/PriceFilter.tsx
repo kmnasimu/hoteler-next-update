@@ -7,11 +7,11 @@ import 'rc-slider/assets/index.css';
 const PriceFilter = () => {
   const [price, setPrice] = useState([0, 1000]); 
 
-  const handlePriceChange = (value) => {
-    setPrice(value);
+  const handlePriceChange = (value: number | number[]) => {
+    setPrice(value as [number, number]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     alert(`Selected Price Range: ${price[0]} - ${price[1]}`);
   };
