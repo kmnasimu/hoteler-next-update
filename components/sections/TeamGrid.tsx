@@ -38,6 +38,7 @@ export default function Team() {
         <Image
           className="image-1"
           src="/images/icons/shape-15.png"
+          style={{ width: "auto", height: "auto" }}
           alt=""
           width={200}
           height={200}

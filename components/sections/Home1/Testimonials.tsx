@@ -57,6 +57,7 @@ export default function Testimonials() {
           alt=""
           width={200}
           height={200}
+          style={{ width: "auto", height: "auto" }}
         />
       </div>
       <div className="auto-container">

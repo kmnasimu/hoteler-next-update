@@ -56,7 +56,7 @@ function Header ({ handleOpen, handleRemove, searchToggle, handleToggle, scroll 
                     <div className="logo-box">
                         <div className="logo">
                             <Link href="/">
-                                <Image src={LogoDark} alt="Logo" style={{ width: "auto", height: "auto" }} />
+                                <Image src={LogoDark} alt="Logo" style={{ width: "auto", height: "auto" }} priority />
                             </Link>
                         </div>
                     </div>

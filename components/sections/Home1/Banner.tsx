@@ -52,6 +52,7 @@ export default function Banner() {
                     width={1920}
                     height={1080}
                     className="img-fluid"
+                    priority={slide.id === 1}
                   />
                 </figure>
               </FadeInUp>
