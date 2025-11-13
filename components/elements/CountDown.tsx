@@ -35,7 +35,7 @@ const CountDown = ({ endDateTime }: CountDownProps) => {
 
     const now = Date.now(); // Number of milliseconds from begining of time
 
-    const future = new Date(endDateTime.endDateTime); // The day we leave for Japan
+    const future = endDateTime instanceof Date ? endDateTime : new Date(endDateTime); // The day we leave for Japan
 
     const timeDif = future.getTime() - now;
     const timeParts = getPartsofTimeDuration(timeDif);
