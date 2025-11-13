@@ -44,10 +44,10 @@ const swiperOptions = {
 
 function Slider() {
     const [activeTab, setActiveTab] = useState("tab-1");
-    const handleTabClick = (tabId) => {
+    const handleTabClick = (tabId: string) => {
         setActiveTab(tabId);
     };
-    const renderTabImage = (tabId, imageSrc) => {
+    const renderTabImage = (tabId: string, imageSrc: string) => {
         return (
             <img
                 id={tabId}

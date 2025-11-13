@@ -7,7 +7,7 @@ import { FreeMode, Navigation, Autoplay, Thumbs } from 'swiper/modules';
 
 export default function ShopDetails(){  
   const [activeIndex, setActiveIndex] = useState(1);
-  const handleOnClick = (index) => {
+  const handleOnClick = (index: number) => {
     setActiveIndex(index);
   };
 
@@ -18,7 +18,7 @@ export default function ShopDetails(){
     item3: 1
   });
 
-  const handleQuantityChange = (item, change) => {
+  const handleQuantityChange = (item: keyof typeof quantities, change: number) => {
     setQuantities(prevQuantities => {
       const newQuantity = prevQuantities[item] + change;
       return {

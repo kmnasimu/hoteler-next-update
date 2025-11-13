@@ -33,7 +33,7 @@ const slides = [
 function Services() {
     const [backgroundImage, setBackgroundImage] = useState('images/background/bg1.jpg'); // default background
 
-    const handleMouseEnter = (bgImage) => {
+    const handleMouseEnter = (bgImage: string) => {
         setBackgroundImage(bgImage);
     };
 

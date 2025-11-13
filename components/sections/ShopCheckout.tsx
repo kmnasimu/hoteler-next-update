@@ -9,7 +9,7 @@ export default function ShopCheckout1 (){
     key: 1,
   })
 
-  const handleClick = (key) => {
+  const handleClick = (key: number) => {
     if (isActive.key === key) {
       setIsActive({
         status: false,

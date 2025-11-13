@@ -7,6 +7,11 @@ declare module 'isotope-layout' {
       gutter?: string | number;
     };
     layoutMode?: string;
+    animationOptions?: {
+      duration?: number;
+      easing?: string;
+      queue?: boolean;
+    };
   }
 
   class Isotope {
